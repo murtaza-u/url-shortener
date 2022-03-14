@@ -10,14 +10,13 @@ type DB struct {
 	conn redis.Conn
 }
 
-func (db *DB) Set(key, value string) error {
-	_, err := db.conn.Do("SET", key, value)
+func (db *DB) Set(key, val string) error {
+	_, err := db.conn.Do("SET", key, val)
 	return err
 }
 
-func (db *DB) Get(key string) error {
-	_, err := db.conn.Do("GET", key)
-	return err
+func (db *DB) Get(key string) (interface{}, error) {
+	return db.conn.Do("GET", key)
 }
 
 func InitDB() *DB {
