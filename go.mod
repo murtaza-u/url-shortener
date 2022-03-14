@@ -2,7 +2,11 @@ module github.com/murtaza-udaipurwala/sme
 
 go 1.17
 
-require github.com/gofiber/fiber/v2 v2.29.0
+require (
+	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
+	github.com/gofiber/fiber/v2 v2.29.0
+	github.com/gomodule/redigo v1.8.8
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
