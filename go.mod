@@ -6,6 +6,7 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/gofiber/fiber/v2 v2.29.0
 	github.com/gomodule/redigo v1.8.8
+	github.com/joho/godotenv v1.4.0
 )
 
 require (

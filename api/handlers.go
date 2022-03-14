@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/murtaza-udaipurwala/sme/uid"
@@ -47,7 +48,7 @@ func handlePOST(ctx *fiber.Ctx) error {
 	}
 
 	return ctx.Status(fiber.StatusOK).JSON(fiber.Map{
-		"url": "http://localhost:3000/" + uid,
+		"url": os.Getenv("APP_URL") + "/" + uid,
 	})
 }
 
